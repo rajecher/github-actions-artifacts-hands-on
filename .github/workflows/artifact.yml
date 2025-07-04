@@ -29,12 +29,7 @@ jobs:
         path: ./artifact
     - name : show the files that are download
       run : ls -lart
-    - name: Create artifact directory
-      run: mkdir -p artifact
-        
-    - name: Download text file-1
-      run: cp hello.txt artifact/hello.txt
-    - name: List files in artifact directory
+    - name: List files in the artifact directory
       run: ls -lart artifact
     - name: Display content of the text file
       run: cat ./artifact/hello.txt
