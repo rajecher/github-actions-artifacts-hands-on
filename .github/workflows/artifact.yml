@@ -26,12 +26,13 @@ jobs:
       uses: actions/download-artifact@v4
       with :
         name: hello-artifact
+        path: ./artifact
     - name : show the files that are download
       run : ls -lart
     - name: Create artifact directory
       run: mkdir -p artifact
         
-    - name: Download text file
+    - name: Download text file-1
       run: cp hello.txt artifact/hello.txt
     - name: List files in artifact directory
       run: ls -lart artifact
