@@ -26,7 +26,8 @@ jobs:
       uses: actions/download-artifact@v4
       with :
         name: hello-artifact
+        
     - name: copy artifact to artifact
-      run: cp hello.txt artifact/hello.txt
+      run: cp ./hello-artifact/hello.txt artifact/hello.txt
     - name: Dispaly content
       run: cat ./artifact/hello.txt
