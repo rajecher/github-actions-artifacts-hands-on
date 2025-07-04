@@ -31,9 +31,9 @@ jobs:
     - name: Create artifact directory
       run: mkdir -p artifact
         
-    - name: copy artifact to artifact
+    - name: Download text file
       run: cp hello.txt artifact/hello.txt
     - name: List files in artifact directory
       run: ls -lart artifact
-    - name: Dispaly content
+    - name: Display content of the text file
       run: cat ./artifact/hello.txt
