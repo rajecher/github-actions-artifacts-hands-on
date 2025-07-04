@@ -26,6 +26,8 @@ jobs:
       uses: actions/download-artifact@v4
       with :
         name: hello-artifact
+    - name : show the files that are download
+      run : ls -lart
         
     - name: copy artifact to artifact
       run: cp ./hello-artifact/hello.txt artifact/hello.txt
