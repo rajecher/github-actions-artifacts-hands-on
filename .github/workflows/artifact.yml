@@ -28,8 +28,12 @@ jobs:
         name: hello-artifact
     - name : show the files that are download
       run : ls -lart
+    - name: Create artifact directory
+      run: mkdir -p artifact
         
     - name: copy artifact to artifact
       run: cp hello.txt artifact/hello.txt
+    - name: List files in artifact directory
+      run: ls -lart artifact
     - name: Dispaly content
       run: cat ./artifact/hello.txt
